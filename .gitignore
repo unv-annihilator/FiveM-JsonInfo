@@ -1,0 +1,7 @@
+.vs/
+FiveM-Info/InfoJsonClient/bin/
+FiveM-Info/InfoJsonClient/obj/
+FiveM-Info/packages/
+FiveM-Info/InfoJsonServer/bin/
+FiveM-Info/InfoJsonServer/obj/
+FiveM-Info/InfoJsonServer/xml/
