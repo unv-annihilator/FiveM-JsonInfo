@@ -44,7 +44,7 @@ namespace GHMatti.InfoJson
         {
             string resourcePath = Path.Combine("resources", API.GetCurrentResourceName(), "xml");
             DirectoryInfo dir = new DirectoryInfo(Path.GetFullPath(resourcePath));
-            FileInfo[] files = dir.GetFiles("*.xml");
+            FileInfo[] files = dir.GetFiles("*shop_weapon*");
 
             WeaponShopItemArray xmlData = null;
             Dictionary<string, Weapon> weaponDict = new Dictionary<string, Weapon>();
@@ -85,7 +85,7 @@ namespace GHMatti.InfoJson
         {
             string resourcePath = Path.Combine("resources", API.GetCurrentResourceName(), "xml");
             DirectoryInfo dir = new DirectoryInfo(Path.GetFullPath(resourcePath));
-            FileInfo[] files = dir.GetFiles("*.meta");
+            FileInfo[] files = dir.GetFiles("*vehicle*");
 
             CVehicleModelInfo xmlData = null;
             Dictionary<string, Vehicle> vehicleDict = new Dictionary<string, Vehicle>();
