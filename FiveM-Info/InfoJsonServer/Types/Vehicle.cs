@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace GHMatti.InfoJson.Types
-{
+namespace GHMatti.InfoJson.Types {
+#pragma warning disable IDE1006 // Naming Styles
+
     [Serializable()]
-    public class Vehicle
-    {
+    public class Vehicle {
+
         [XmlElement("modelHash")]
         public uint modelHash { get; set; }
 
@@ -33,27 +34,31 @@ namespace GHMatti.InfoJson.Types
     }
 
     [Serializable()]
-    public class Data
-    {
+    public class Data {
+
         [XmlElement("Item")]
         public Vehicle[] vehicle { get; set; }
     }
 
     [Serializable()]
     [XmlRoot("CVehicleModelInfo__InitDataList")]
-    public class CVehicleModelInfo
-    {
+    public class CVehicleModelInfo {
+
         [XmlElement("InitDatas")]
         public Data data { get; set; }
     }
 
     [Serializable()]
     [XmlRoot("MVehicleData")]
-    public class MVehicleData
-    {
-        public MVehicleData() { vehicles = new List<Vehicle>(); }
+    public class MVehicleData {
+
+        public MVehicleData() {
+            vehicles = new List<Vehicle>();
+        }
+
         [XmlElement("vehicle")]
         public List<Vehicle> vehicles { get; set; }
     }
 
+#pragma warning restore IDE1006 // Naming Styles
 }

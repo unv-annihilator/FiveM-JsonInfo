@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace GHMatti.InfoJson.Types
-{
+namespace GHMatti.InfoJson.Types {
+#pragma warning disable IDE1006 // Naming Styles
+
     [Serializable()]
-    public class Weapon
-    {
+    public class Weapon {
+
         [XmlElement("weaponHash")]
         public uint weaponHash { get; set; }
 
@@ -30,15 +31,15 @@ namespace GHMatti.InfoJson.Types
     }
 
     [Serializable()]
-    public class WeaponComponents
-    {
+    public class WeaponComponents {
+
         [XmlElement("Item")]
         public List<WeaponComponent> components { get; set; }
     }
 
     [Serializable()]
-    public class WeaponComponent
-    {
+    public class WeaponComponent {
+
         [XmlElement("componentName")]
         public string componentName { get; set; }
 
@@ -51,16 +52,18 @@ namespace GHMatti.InfoJson.Types
 
     [Serializable()]
     [XmlRoot("WeaponShopItemArray")]
-    public class WeaponShopItemArray
-    {
+    public class WeaponShopItemArray {
+
         [XmlElement("weaponShopItems")]
         public WeaponShopItems weaponShopItems { get; set; }
     }
 
     [Serializable()]
-    public class WeaponShopItems
-    {
+    public class WeaponShopItems {
+
         [XmlElement("Item")]
         public List<Weapon> weapons { get; set; }
     }
+
+#pragma warning restore IDE1006 // Naming Styles
 }
